@@ -1,11 +1,11 @@
 # Gestione camere hotel
 
-Applicazione per la gestione delle camere di un hotel, prenotazioni e servizi.
+Applicazione per la gestione delle camere di un hotel e prenotazioni.
 
-## Caratteristiche principali
+## Funzionalità
 
-* Gestione delle camere: Aggiungi, modifica e visualizza le informazioni sulle camere (numero, tipologia, stato).
-* Prenotazioni: Crea, modifica e cancella le prenotazioni, visualizza il calendario delle prenotazioni.
-* Gestione degli ospiti: Registra e gestisci le informazioni degli ospiti.
-* Servizi: Offri e gestisci servizi aggiuntivi (pulizia, colazione, ecc.).
-* Reportistica: Genera report sulle prenotazioni, disponibilità delle camere e altro.
+* Aggiungere camera
+* Visualizzare informazioni delle camere (se occupata, tipologia, proprietario, data inizio soggiorno, data fine soggiorno)
+* Visualizzare camere libere per ogni tipologia
+* Modifica delle informaizoni delle camere
+* Eliminare una camera
