@@ -5,13 +5,13 @@ Applicazione per la gestione delle camere di un hotel e prenotazioni.
 ## Funzionalità
 
 * Aggiungere camera
-* Visualizzare informazioni delle camere (se occupata, tipologia, proprietario, prezzo, data inizio soggiorno, data fine soggiorno)
+* Visualizzare informazioni delle camere (se occupata, tipologia, proprietario, prezzo)
 * Visualizzare camere libere per ogni tipologia
-* Modifica delle informaizoni delle camere
+* Modifica delle informazioni delle camere
 * Eliminare una camera
 
 ### Tipologia camere
-* Stanza singola
-* Camera doppia
-* Camera tripla
-* Suite
+* Stanza singola (80€ a notte)
+* Camera doppia (120€ a notte)
+* Camera tripla (140€ a notte)
+* Suite (220€ a notte)
