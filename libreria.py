@@ -37,7 +37,7 @@ def modifica_camera(camere):
                 prezzo_nuovo=int(input("Qual è il nuovo prezzo?: "))
                 occupazione=int(input("Metti 0 se l'occupazione è libera e metti 1 se l'occupazione è occupata: "))
             except ValueError:
-                print("Inserisci un numero e non una stringa")
+                print("Inserisci un numero e non una stringa!")
             if occupazione<0 or occupazione>1:
                 print("Sbagliato a inserire!")
             elif occupazione==0:
