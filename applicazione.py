@@ -38,6 +38,7 @@ while True:
     os.system('cls')
     print("0. Esci")
     print("1. Visualizza tutte le camere")
+    print("2. Modifica una camera ")
 
     scelta = int(input())
 
@@ -46,7 +47,8 @@ while True:
 
     elif scelta == 1:
         l.visualizza_camere(camere)
-    
+    elif scelta==2:
+        l.modifica_camera(camere)
     input("Premi un tasto per continuare...")
     
 print("App chiusa")
