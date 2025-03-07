@@ -5,9 +5,9 @@ def visualizza_camere(camere):
     print(f'{"+":>10}{"-"*70}+')
     count = 0
     while count < len(camere):
-        if camere[count]["occupazione"]:
+        if camere[count]["occupazione"] == True:
             camere[count]["occupazione"] = "Occupata"
-        else:
+        elif camere[count]["occupazione"] == False:
             camere[count]["occupazione"] = "Non occupata"
             camere[count]["nominativo"] = "Nessun nominativo"
 
