@@ -51,14 +51,19 @@ while True:
 
     elif scelta == 1:
         l.visualizza_camere(camere)
+
     elif scelta==2:
         l.visualizza_tipologia(camere)
+
     elif scelta==3:
         l.modifica_camera(camere)
+
     elif scelta == 4:
         l.crea_camera(camere)
+
     elif scelta == 5:
         l.elimina_camera(camere)
+        
     input("Premi un tasto per continuare...")
     
 print("App chiusa")
