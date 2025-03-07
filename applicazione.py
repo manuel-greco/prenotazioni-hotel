@@ -38,7 +38,7 @@ while True:
     os.system('cls')
     print("0. Esci")
     print("1. Visualizza tutte le camere")
-    
+    print("2. Visualizza camere per tipologia")
     
     print("4. Elimina una camera")
 
@@ -48,7 +48,9 @@ while True:
         break
 
     elif scelta == 1:
-        l.visualizza_camere(camere) 
+        l.visualizza_camere(camere)
+    elif scelta == 2:
+        l.visualizza_tipologia(camere)
       
       
       
