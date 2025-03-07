@@ -34,13 +34,15 @@ camere = [
     }
 ]
 
+
 while True:
     os.system('cls')
     print("0. Esci")
     print("1. Visualizza tutte le camere")
     print("2. Visualizza camere per tipologia")
     
-    print("4. Elimina una camera")
+    print("4. Crea una nuova camera")
+    print("5. Elimina una camera")
 
     scelta = int(input())
 
@@ -51,14 +53,10 @@ while True:
         l.visualizza_camere(camere)
     elif scelta == 2:
         l.visualizza_tipologia(camere)
-      
-      
-      
-      
-
- 
-    
-    elif scelta==4:
+        
+    elif scelta == 4:
+        l.crea_camera(camere)  
+    elif scelta == 5:
         l.elimina_camera(camere) 
         
     

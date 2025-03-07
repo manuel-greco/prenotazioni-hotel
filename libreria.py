@@ -38,6 +38,19 @@ def visualizza_tipologia(camere):
 def modifica_camera():
     pass
 
+def crea_camera(camere):
+    camera = {}
+    occupazione = input("La camera è 'Occupata' o 'Non occupata'?\nInserisci la tua risposta: ")
+    tipologia = input("Inserisci la tipologia della camera (singola/doppia/tripla/suite): ")
+    nominativo = input("Inserisci il nominativo dell'ospite, se la camera è libera inserisci 'Nessun nominativo': ")
+    prezzo = int(input("Inserisci il prezzo della camera: "))
+    camera["occupazione"] = occupazione
+    camera["tipologia"] = tipologia
+    camera["nominativo"] = nominativo
+    camera["prezzo"] = prezzo
+    camere.append(camera)
+    print("La camera è stata aggiunta con sucesso!")
+    
 # eliminare una camera Ouertani
 def elimina_camera(camere):
     
