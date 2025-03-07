@@ -69,9 +69,6 @@ def modifica_camera(camere):
             print("Modificato con successo",camere[scelta])
         return
 
-# eliminare una camera
-def elimina_camera():
-    pass
 
 
 def crea_camera(camere):
