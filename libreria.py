@@ -87,6 +87,7 @@ def crea_camera(camere):
     camere.append(camera)
     print("La camera è stata aggiunta con sucesso!")
     
+    
 # eliminare una camera Ouertani
 def elimina_camera(camere):
     
