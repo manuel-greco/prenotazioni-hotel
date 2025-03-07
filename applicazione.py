@@ -38,6 +38,9 @@ while True:
     os.system('cls')
     print("0. Esci")
     print("1. Visualizza tutte le camere")
+    
+    
+    print("4. Elimina una camera")
 
     scelta = int(input())
 
@@ -45,7 +48,17 @@ while True:
         break
 
     elif scelta == 1:
-        l.visualizza_camere(camere)
+        l.visualizza_camere(camere) 
+      
+      
+      
+      
+
+ 
+    
+    elif scelta==4:
+        l.elimina_camera(camere) 
+        
     
     input("Premi un tasto per continuare...")
     

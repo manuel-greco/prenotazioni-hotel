@@ -23,6 +23,20 @@ def visualizza_tipologia():
 def modifica_camera():
     pass
 
-# eliminare una camera
-def elimina_camera():
-    pass
+# eliminare una camera Ouertani
+def elimina_camera(camere):
+    
+    visualizza_camere(camere)#visualizza le camere 
+    
+    #qua sotto chiede in input il numero della camera e lo elimina se è presente nella lista delle camere
+    while True:
+            try:
+                indice = int(input("Inserisci il numero della camera da eliminare: "))
+                if 0 <= indice < len(camere):
+                    camera_eliminata = camere.pop(indice)
+                    print(f"Camera {indice} ({camera_eliminata['tipologia']}) eliminata con successo.")
+                    break
+                else:
+                    print("Indice non valido. Riprova.")
+            except ValueError:
+                print("Errore: inserire un numero valido.")
