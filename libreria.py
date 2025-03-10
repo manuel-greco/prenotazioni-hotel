@@ -96,6 +96,6 @@ def elimina_camera(camere):
                     print(f"Camera {indice} ({camera_eliminata['tipologia']}) eliminata con successo.")
                     break
                 else:
-                    print("Indice non valido. Riprova.")
+                    print("\033[33mIndice non valido. Riprova.\033[0m")
             except ValueError:
-                print("Errore: inserire un numero valido.")
+                print("\033[41;37mErrore: inserire un numero valido.\033[0m")
