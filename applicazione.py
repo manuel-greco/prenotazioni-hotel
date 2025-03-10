@@ -37,14 +37,17 @@ camere = [
 
 while True:
     os.system('cls')
-    print("0. Esci")
-    print("1. Visualizza tutte le camere")
-    print("2. Visualizza tipologia ")
-    print("3. Modifica una camera")
-    print("4. Crea una nuova camera")
-    print("5. Elimina una camera")
-
-    scelta = int(input())
+    print(f'\033[0m+{"-"*50}+')
+    print(f'|{"Benvenuto nel Hotel":^50}|')
+    print(f'+{"-"*50}+')
+    print(f'|0. Esci{"|":>44}')
+    print(f'|1. Visualizza tutte le camere{"|":>22}')
+    print(f'|2. Visualizza camere per tipologia{"|":>17}')
+    print(f'|3. Modifica una camera{"|":>29}')
+    print(f'|4. Crea una nuova camera{"|":>27}')
+    print(f'|5. Elimina una camera{"|":>30}')
+    print(f'+{"-"*50}+')
+    scelta = int(input("\033[92mSeleziona la tua scelta: "))
 
     if scelta == 0:
         break
@@ -64,6 +67,6 @@ while True:
     elif scelta == 5:
         l.elimina_camera(camere)
         
-    input("Premi un tasto per continuare...")
+    input("\033[93mPremi un tasto per continuare...")
     
-print("App chiusa")
+print("\033[41mApp chiusa")
