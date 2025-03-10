@@ -48,7 +48,15 @@ while True:
     print(f'|5. Elimina una camera{"|":>30}')
     print(f'|6. Prenota una camera{"|":>30}')
     print(f'+{"-"*50}+')
+<<<<<<< HEAD
     scelta = int(input("\033[92mSeleziona la tua scelta: ]"))
+=======
+    try:
+        scelta = int(input("\033[92mSeleziona la tua scelta: \033[0m"))
+    except ValueError:
+        print("\033[41;37mInserisci un numero e non una stringa!\033[0m")
+        input("\033[93mPremi un tasto per continuare...")
+>>>>>>> a5aafe4f1e7af8e9f8a5efb360c018ed20f44d6c
 
     if scelta == 0:
         break
@@ -71,6 +79,12 @@ while True:
     elif scelta == 6:
         l.prenota_camera(camere)
         
+<<<<<<< HEAD
     input("\033[93mPremi un tasto per continuare...]")
     
 print("\033[41mApp chiusa]")
+=======
+    input("\033[93mPremi un tasto per continuare...\033[0m")
+    
+print("\033[41mApp chiusa\033[0m")
+>>>>>>> a5aafe4f1e7af8e9f8a5efb360c018ed20f44d6c
