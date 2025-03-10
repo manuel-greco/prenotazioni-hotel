@@ -47,7 +47,11 @@ while True:
     print(f'|4. Crea una nuova camera{"|":>27}')
     print(f'|5. Elimina una camera{"|":>30}')
     print(f'+{"-"*50}+')
-    scelta = int(input("\033[92mSeleziona la tua scelta: "))
+    try:
+        scelta = int(input("\033[92mSeleziona la tua scelta: \033[0m"))
+    except ValueError:
+        print("\033[41;37mInserisci un numero e non una stringa!\033[0m")
+        input("\033[93mPremi un tasto per continuare...")
 
     if scelta == 0:
         break
@@ -67,6 +71,6 @@ while True:
     elif scelta == 5:
         l.elimina_camera(camere)
         
-    input("\033[93mPremi un tasto per continuare...")
+    input("\033[93mPremi un tasto per continuare...\033[0m")
     
-print("\033[41mApp chiusa")
+print("\033[41mApp chiusa\033[0m")
