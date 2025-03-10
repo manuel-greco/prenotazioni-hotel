@@ -34,7 +34,6 @@ camere = [
     }
 ]
 
-
 while True:
     os.system('cls')
     print(f'+{"-"*51}+')
