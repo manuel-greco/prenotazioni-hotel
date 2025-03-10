@@ -99,3 +99,15 @@ def elimina_camera(camere):
                     print("Indice non valido. Riprova.")
             except ValueError:
                 print("Errore: inserire un numero valido.")
+
+#Prenota una camer
+def prenota_camera(camere, tipologia, nominativo):
+    count = 0
+    while count < len(camere):
+        camera = camere[count]
+        if not camera["occupazione"] and camera["tipologia"] == tipologia:
+            camera["occupazione"] = "Occupata"
+            camera["Nominativo"] = nominativo
+            print(f"La camera di {tipologia} è stata prenotata aa nome di {nominativo}. Il prezzo è: {camera['prezzo']}€")
+
+prenota_camera()
