@@ -45,7 +45,7 @@ def modifica_camera(camere):
         return
     count = 0
     while count<len(camere):
-        if scelta<0 or scelta>len(camere):
+        if scelta<0 or scelta>=len(camere):
             print("Hai sbagliato a scegliere il numero della camera!")
         else:
             tipo_nuova=input("Qual è la nuova tipologia della camera?: ")
