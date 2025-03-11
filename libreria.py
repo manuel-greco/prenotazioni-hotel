@@ -35,30 +35,27 @@ def visualizza_tipologia(camere):
         count += 1
     print(f'{"-"*9}+{"-"*70}+')
 
-# modifica delle info per camera
-def modifica_camera(camere):
+# prenota una camera
+def prenota_camera(camere):
     visualizza_camere(camere)
     try:
-        scelta=int(input("Quale camera vuoi modificare?(Scegli tramite il numero della camera): "))
+        scelta=int(input("Quale camera vuoi prenotare?(Scegli tramite il numero della camera): "))
     except ValueError:
         print("\033[41;37mDovevi inserire un numero!\033[0m")
         return
-    
-    if scelta<0 or scelta>=len(camere):
-        print("\033[41;37mHai sbagliato a scegliere il numero della camera!\033[0m")
+
+    if camere[scelta]["occupazione"] == True or camere[scelta]["occupazione"] == "Occupata":
+        print("\033[93mCamera occupata!\033[0m")
     else:
         try:
-            nominativo_nuovo=input("A chi appartiene il nuovo nominativo?: ")
+            nominativo_nuovo = input("Inserisci il nominativo a cui deve essere assegnata la camera: ")
         except ValueError:
-            print("\033[41;37mInserisci nominativo valido!\033[0m")
+            print("\033[41;37mNominativo non valido!\033[0m")
             return
-
-        if nominativo_nuovo == "":
-            print("\033[41;37mCamera non prenotata: nominativo vuoto!\033[0m")
-        else:
+        if camere[scelta]["occupazione"] == False or camere[scelta]["occupazione"] == "Non occupata":
             camere[scelta]["nominativo"] = nominativo_nuovo
             camere[scelta]["occupazione"] = True
-            print("\033[92mCamera prenotata!\033[0m")
+        print(f"\033[42mLa camera numero {scelta} è stata prenotata a nome di {nominativo_nuovo} con successo!\033[0m")
 
 # creazione camera
 def crea_camera(camere):
@@ -76,7 +73,7 @@ def crea_camera(camere):
     camera["nominativo"] = nominativo
     camera["prezzo"] = prezzo
     camere.append(camera)
-    print("La camera è stata aggiunta con sucesso!")
+    print("\033[42mLa camera è stata aggiunta con sucesso!\033[0m")
 
 # eliminare una camera
 def elimina_camera(camere):
@@ -87,9 +84,9 @@ def elimina_camera(camere):
                 indice = int(input("Inserisci il numero della camera da eliminare: "))
                 if 0 <= indice < len(camere):
                     camera_eliminata = camere.pop(indice)
-                    print(f"Camera {indice} ({camera_eliminata['tipologia']}) eliminata con successo.")
+                    print(f"\033[42mCamera {indice} ({camera_eliminata['tipologia']}) eliminata con successo.\033[0m")
                     break
                 else:
                     print("\033[33mIndice non valido. Riprova.\033[0m")
             except ValueError:
-                print("Errore: inserire un numero valido.")
+                print("\033[33mErrore: inserire un numero valido.\033[0m")

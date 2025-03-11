@@ -42,9 +42,9 @@ while True:
     print(f'| 0. Esci{"|":>44}')
     print(f'| 1. Visualizza tutte le camere{"|":>22}')
     print(f'| 2. Visualizza camere per tipologia{"|":>17}')
-    print(f'| 3. Modifica una camera{"|":>29}')
-    print(f'| 4. Crea una nuova camera{"|":>27}')
-    print(f'| 5. Elimina una camera{"|":>30}')
+    print(f'| 3. Prenota camera{"|":>34}')
+    print(f'| 5. Crea una nuova camera{"|":>27}')
+    print(f'| 6. Elimina una camera{"|":>30}')
     print(f'+{"-"*51}+')
 
     scelta = int(input("\033[93mSeleziona la tua scelta: \033[0m"))
@@ -59,7 +59,7 @@ while True:
         l.visualizza_tipologia(camere)
 
     elif scelta==3:
-        l.modifica_camera(camere)
+        l.prenota_camera(camere)
 
     elif scelta == 4:
         l.crea_camera(camere)
